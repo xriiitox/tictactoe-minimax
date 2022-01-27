@@ -9,7 +9,8 @@ Variable board size (if other than 3, coordinates must be used)
 My first actual good project!
 
 ## How to run
-Make sure you have the .NET runtime installed
+Make sure you have the .NET runtime installed!
+
 To run: download and run .exe from releases
 
 ## How to compile
