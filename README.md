@@ -15,5 +15,7 @@ To run: download and run .exe from releases
 
 ## How to compile
 .NET SDK required!
+
 Clone repository with `git clone https://github.com/xriiitox/tictactoe.git`
+
 Open repo in VSCode, then press F5 to build and run.
