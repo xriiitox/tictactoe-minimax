@@ -74,11 +74,16 @@
             } while (!gameEnd);
             Thread.Sleep(1000);
             Console.Write("\nWould you like to play again? (y/n): ");
-            string playAgain = Console.ReadLine();
-            if (playAgain == "y") {
-                Main();
-            } else {
-                return;
+            string? playAgain = Console.ReadLine();
+            switch (playAgain) {
+                case "y":
+                    Main();
+                    break;
+                case "n":
+                    return;
+                default:
+                    Console.WriteLine("Invalid input. Exiting...");
+                    return;
             }
         }
     }

@@ -2,7 +2,7 @@ public class Game {
         public int SIZE;
         public char[,] board;
         public int userX, userY, AIX, AIY;
-        public string userMoveThree;
+        public string? userMoveThree;
         
 
         public Game(int SIZE) {
@@ -103,31 +103,94 @@ public class Game {
                 this.userMoveThree = Console.ReadLine();
                 switch (this.userMoveThree) {
                     case "topleft":
-                        this.Move(player, 0, 0);
+                        this.SetUserMove(0, 0);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "topmiddle":
-                        this.Move(player, 1, 0);
+                        this.SetUserMove(1, 0);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "topright":
-                        this.Move(player, 2, 0);
+                        this.SetUserMove(2, 0);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "middleleft":
-                        this.Move(player, 0, 1);
+                        this.SetUserMove(0, 1);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "middle":
-                        this.Move(player, 1, 1);
+                        this.SetUserMove(1, 1);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "middleright":
-                        this.Move(player, 2, 1);
+                        this.SetUserMove(2, 1);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "bottomleft":
-                        this.Move(player, 0, 2);
+                        this.SetUserMove(0, 2);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "bottommiddle":
-                        this.Move(player, 1, 2);
+                        this.SetUserMove(1, 2);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case "bottomright":
-                        this.Move(player, 2, 2);
+                        this.SetUserMove(2, 2);
+                        if (this.CheckIllegalMovesPlayer(this.userX, this.userY)) {
+                            Console.WriteLine("\nIllegal move! Please try again. \n");
+                            this.UserMove(player);
+                        }
+                        else {
+                            this.Move(player, this.userX, this.userY);
+                        }
                         break;
                     case null:
                         Console.WriteLine("\nIllegal move! Please try again. \n");
