@@ -58,8 +58,7 @@
                 }
                 else {
                     Thread.Sleep(500);
-                    Console.Clear();
-                    if ((choice == 1) || (choice == 2)) {
+                    if ((choice == 1)) {
                         game.DoAIBestMove(game, 'O', 'X');
                     }
                     else {
