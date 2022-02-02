@@ -28,7 +28,7 @@ public class Game {
         public void Clear() {
             for (int x = 0; x < this.SIZE; x++) {
                 for (int y = 0; y < this.SIZE; y++) {
-                    this.board[x, y] = ' ';
+                    this.board[x, y] = (char)0;
                 }
             }
         }
@@ -216,7 +216,7 @@ public class Game {
                 for (j = 0; j < this.SIZE; j++) {
                     if (backupBoard[i, j] == (char)0) {
                         backupBoard[i,j] = ai;
-                        score = Minimax.minimax(backupBoard, 0, false, game, player, ai);
+                        score = Minimax.minimax(backupBoard, 0, false, game, player, ai, int.MinValue, int.MaxValue);
                         backupBoard[i, j] = (char)0;
                         if (score > bestScore) {
                             bestScore = score;
@@ -235,7 +235,7 @@ public class Game {
             int col;
             for (row = 0; row < this.SIZE; row++) {
                 for (col = 0; col < this.SIZE; col++) {
-                    if (board[row, col] != 'X' && board[row, col] != 'O') { return false; }
+                    if (board[row, col] == (char)0) { return false; }
                 }
             }
             return true;

@@ -43,7 +43,6 @@
                     gameEnd = true;
                 }
                 else {
-                    Thread.Sleep(500);
                     game.UserMove('X');
                     Console.Clear();
                     game.Display();
@@ -57,7 +56,6 @@
                     gameEnd = true;
                 }
                 else {
-                    Thread.Sleep(500);
                     if ((choice == 1)) {
                         game.DoAIBestMove(game, 'O', 'X');
                     }
