@@ -216,7 +216,7 @@ public class Game {
                 for (j = 0; j < this.SIZE; j++) {
                     if (backupBoard[i, j] == (char)0) {
                         backupBoard[i,j] = ai;
-                        score = Minimax.minimax(backupBoard, 0, false, game, player, ai, int.MinValue, int.MaxValue);
+                        score = Minimax.minimax(backupBoard, 0, true, game, player, ai, int.MinValue, int.MaxValue);
                         backupBoard[i, j] = (char)0;
                         if (score > bestScore) {
                             bestScore = score;
